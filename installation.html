@@ -1,0 +1,766 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Install &#8212; Smilei 4.6 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/smilei_theme.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/smileiIcon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Write a namelist" href="namelist.html" />
+    <link rel="prev" title="Use" href="use.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      scale: 95,
+      availableFonts: ["TeX"]
+    }
+  });
+  </script>
+   
+  </head><body>
+
+<div id="smallScreenMenu" class="off">
+
+    
+    <div class="toctree-smilei">
+        <ul>
+                <li class="outer">
+                    <a href="licence.html">Licence</a>
+                </li>
+                <li class="outer">
+                    <a href="synopsis.html">Synopsis</a>
+                </li>
+                <li class="outer">
+                    <a href="highlights.html">Highlights</a>
+                </li>
+                <li class="outer">
+                    <a href="releases.html">Releases</a>
+                </li>
+        </ul>
+        <hr />
+        <ul>
+                <li class="outer">
+                    <a href="units.html">Units</a>
+                </li>
+                <li class="outer">
+                    <a href="algorithms.html">PIC algorithms</a>
+                </li>
+                <li class="outer">
+                    <a href="parallelization.html">Parallelization basics</a>
+                </li>
+                <li class="outer">
+                    <a href="SDMD.html">Single-domain multiple decompositions</a>
+                </li>
+                <li class="outer">
+                    <a href="vectorization.html">Vectorization</a>
+                </li>
+                <li class="outer">
+                    <a href="collisions.html">Binary collisions & reactions</a>
+                </li>
+                <li class="outer">
+                    <a href="ionization.html">Ionization</a>
+                </li>
+                <li class="outer">
+                    <a href="radiation_loss.html">High-energy photon emission & radiation reaction</a>
+                </li>
+                <li class="outer">
+                    <a href="multiphoton_Breit_Wheeler.html">Multiphoton Breit-Wheeler pair creation</a>
+                </li>
+                <li class="outer">
+                    <a href="particle_merging.html">Particle Merging</a>
+                </li>
+                <li class="outer">
+                    <a href="particle_injector.html">Particle Injector</a>
+                </li>
+                <li class="outer">
+                    <a href="laser_envelope.html">Laser envelope model</a>
+                </li>
+                <li class="outer">
+                    <a href="relativistic_fields_initialization.html">Field initialization for relativistic species</a>
+                </li>
+                <li class="outer">
+                    <a href="azimuthal_modes_decomposition.html">Azimuthal modes decomposition</a>
+                </li>
+        </ul>
+        <hr />
+        <ul>
+            </ul>
+                <ul>
+<li><a class="reference internal" href="#">Install</a><ul>
+<li><a class="reference internal" href="#install-the-dependencies">Install the dependencies</a></li>
+<li><a class="reference internal" href="#download-and-compile">Download and compile</a></li>
+<li><a class="reference internal" href="#advanced-compilation-options">Advanced compilation options</a></li>
+<li><a class="reference internal" href="#environment-variables-for-compilation">Environment variables for compilation</a></li>
+<li><a class="reference internal" href="#options-for-simd-vectorization">Options for SIMD vectorization</a></li>
+<li><a class="reference internal" href="#create-the-documentation">Create the documentation</a></li>
+<li><a class="reference internal" href="#install-the-happi-module">Install the happi module</a></li>
+<li><a class="reference internal" href="#install-the-smilei-tables-tool">Install the <code class="docutils literal notranslate"><span class="pre">smilei_tables</span></code> tool</a></li>
+</ul>
+</li>
+</ul>
+
+            <ul>
+                <li class="outer">
+                    <a href="namelist.html">Write a namelist</a>
+                </li>
+                <li class="outer">
+                    <a href="run.html">Run</a>
+                </li>
+                <li class="outer">
+                    <a href="post-processing.html">Post-process</a>
+                </li>
+                <li class="outer">
+                    <a href="contribute.html">Contribute</a>
+                </li>
+                <li class="outer">
+                    <a href="troubleshoot.html">Troubleshoot</a>
+                </li>
+        </ul>
+        <hr />
+        <ul>
+                <li class="outer">
+                    <a href="material.html">Publications</a>
+                </li>
+                <li class="outer">
+                    <a href="partners.html">Partners</a>
+                </li>
+                <li class="outer">
+                    <a href="https://smileipic.github.io/tutorials">Smilei tutorials</a>
+                </li>
+        </ul>
+        <hr />
+    </div>
+
+</div>
+<div id="hcontainer">
+    <div id="nav_positioner">
+        <div id="nav">
+            <div id="nav_button" onclick="toggleNav()">
+                Sections
+            </div>
+            <div id="nav_list" class="toctree-smilei">
+                <div id="nav_title"><a href="#">Install</a></div>
+                <ul>
+<li><a class="reference internal" href="#">Install</a><ul>
+<li><a class="reference internal" href="#install-the-dependencies">Install the dependencies</a></li>
+<li><a class="reference internal" href="#download-and-compile">Download and compile</a></li>
+<li><a class="reference internal" href="#advanced-compilation-options">Advanced compilation options</a></li>
+<li><a class="reference internal" href="#environment-variables-for-compilation">Environment variables for compilation</a></li>
+<li><a class="reference internal" href="#options-for-simd-vectorization">Options for SIMD vectorization</a></li>
+<li><a class="reference internal" href="#create-the-documentation">Create the documentation</a></li>
+<li><a class="reference internal" href="#install-the-happi-module">Install the happi module</a></li>
+<li><a class="reference internal" href="#install-the-smilei-tables-tool">Install the <code class="docutils literal notranslate"><span class="pre">smilei_tables</span></code> tool</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="headercolor">
+    </div>
+    <div class="hpositioner">
+        <div class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img class="logo" src="_static/smileiLogo.svg" alt="Logo" />
+            </a>
+        </div>
+        <div class="menu"
+            id="menu_Overview"
+            
+        >
+            <div id="menuButton_Overview" class="menuButton"
+                 onmouseenter="prepareMenu('menu_Overview')"
+                 onmousedown="event.preventDefault()"
+            >
+                <a href="overview.html">
+                    <span>Overview</span>
+                </a>
+            </div>
+            <div class="off" onmouseleave="leaveMenu('menu_Overview',this)">
+                <div class="toctree-smilei">
+                    <ul>
+                        <li class="outer">
+                            <a href="licence.html">Licence</a>
+                        </li>
+                        <li class="outer">
+                            <a href="synopsis.html">Synopsis</a>
+                        </li>
+                        <li class="outer">
+                            <a href="highlights.html">Highlights</a>
+                        </li>
+                        <li class="outer">
+                            <a href="releases.html">Releases</a>
+                        </li>
+        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="menu"
+            id="menu_Understand"
+            
+        >
+            <div id="menuButton_Understand" class="menuButton"
+                 onmouseenter="prepareMenu('menu_Understand')"
+                 onmousedown="event.preventDefault()"
+            >
+                <a href="understand.html">
+                    <span>Understand</span>
+                </a>
+            </div>
+            <div class="off" onmouseleave="leaveMenu('menu_Understand',this)">
+                <div class="toctree-smilei">
+                    <ul>
+                        <li class="outer">
+                            <a href="units.html">Units</a>
+                        </li>
+                        <li class="outer">
+                            <a href="algorithms.html">PIC algorithms</a>
+                        </li>
+                        <li class="outer">
+                            <a href="parallelization.html">Parallelization basics</a>
+                        </li>
+                        <li class="outer">
+                            <a href="SDMD.html">Single-domain multiple decompositions</a>
+                        </li>
+                        <li class="outer">
+                            <a href="vectorization.html">Vectorization</a>
+                        </li>
+                        <li class="outer">
+                            <a href="collisions.html">Binary collisions & reactions</a>
+                        </li>
+                        <li class="outer">
+                            <a href="ionization.html">Ionization</a>
+                        </li>
+                        <li class="outer">
+                            <a href="radiation_loss.html">High-energy photon emission & radiation reaction</a>
+                        </li>
+                        <li class="outer">
+                            <a href="multiphoton_Breit_Wheeler.html">Multiphoton Breit-Wheeler pair creation</a>
+                        </li>
+                        <li class="outer">
+                            <a href="particle_merging.html">Particle Merging</a>
+                        </li>
+                        <li class="outer">
+                            <a href="particle_injector.html">Particle Injector</a>
+                        </li>
+                        <li class="outer">
+                            <a href="laser_envelope.html">Laser envelope model</a>
+                        </li>
+                        <li class="outer">
+                            <a href="relativistic_fields_initialization.html">Field initialization for relativistic species</a>
+                        </li>
+                        <li class="outer">
+                            <a href="azimuthal_modes_decomposition.html">Azimuthal modes decomposition</a>
+                        </li>
+        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="menu"
+            id="menu_Use"
+            style="font-weight:bold"
+        >
+            <div id="menuButton_Use" class="menuButton"
+                 onmouseenter="prepareMenu('menu_Use')"
+                 onmousedown="event.preventDefault()"
+            >
+                <a href="use.html">
+                    <span>Use</span>
+                </a>
+            </div>
+            <div class="off" onmouseleave="leaveMenu('menu_Use',this)">
+                <div class="toctree-smilei">
+                    <ul>
+                        <li >
+                            <a href="#">Install</a>
+                        </li>
+                        <li class="outer">
+                            <a href="namelist.html">Write a namelist</a>
+                        </li>
+                        <li class="outer">
+                            <a href="run.html">Run</a>
+                        </li>
+                        <li class="outer">
+                            <a href="post-processing.html">Post-process</a>
+                        </li>
+                        <li class="outer">
+                            <a href="contribute.html">Contribute</a>
+                        </li>
+                        <li class="outer">
+                            <a href="troubleshoot.html">Troubleshoot</a>
+                        </li>
+        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="last menu"
+            id="menu_More"
+            
+        >
+            <div id="menuButton_More" class="menuButton"
+                 onmouseenter="prepareMenu('menu_More')"
+                 onmousedown="event.preventDefault()"
+            >
+                <a href="more.html">
+                    <span>More</span>
+                </a>
+            </div>
+            <div class="off" onmouseleave="leaveMenu('menu_More',this)">
+                <div class="toctree-smilei">
+                    <ul>
+                        <li class="outer">
+                            <a href="material.html">Publications</a>
+                        </li>
+                        <li class="outer">
+                            <a href="partners.html">Partners</a>
+                        </li>
+                        <li class="outer">
+                            <a href="https://smileipic.github.io/tutorials">Smilei tutorials</a>
+                        </li>
+        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            var es=document.getElementsByClassName("menuButton"), i=0;
+            var evt = "ontouchend" in document ? "touchend" : "click";
+            for( var i=0; i<es.length; i+=1 ) {
+                es[i].addEventListener(evt, function(a){ return function(){toggleMenu(a)};}(es[i].parentNode.id));
+            }
+        </script>
+        
+        <div id="searchbox" role="search" style="display:none">
+            <form class="search" action="search.html" method="get">
+              <input type="text" name="q" placeholder="Search" id="searchinput" />
+              <input type="hidden" name="check_keywords" value="yes" />
+              <input type="hidden" name="area" value="default" />
+            </form>
+        </div>
+        
+        <div id="searchicon" onclick="openSearch()" style="display:block">
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 80 120">
+              <g transform="translate(0,-932.36216)" >
+                <circle
+                   r="25" cy="977.51044" cx="38.078663"
+                   style="opacity:1;fill:none;stroke:#ffffff;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                <rect
+                   transform="matrix(0.36717877,0.93015039,-0.93427297,0.35655858,0,0)"
+                   rx="4.9996676" ry="7.4995141"
+                   y="316.16959" x="947.6142"
+                   height="14.117695" width="46.476151"
+                   style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;" />
+                <path
+                   d="m 41.383282,962.25996 a 15,15 0 0 1 11.660107,11.6355"
+                   style="opacity:1;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+              </g>
+            </svg>
+        </div>
+        <div id="closesearchicon" onclick="closeSearch()" style="display:none">
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 80 120">
+              <g
+                 transform="translate(0,-932.36216)">
+                <path
+                   d="m 10,962.36216 60,60.00004"
+                   style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+                <path
+                   d="M 70,962.36216 10,1022.3622"
+                   style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+              </g>
+            </svg>
+        </div>
+        
+        <div id="smallScreenMenuButton" onclick="toggleSmallScreenMenu(event)">
+            <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+               viewBox="-20 -20 140 140">
+              <g  style="fill:#ffffff;stroke:none;">
+                <circle cx="15" cy="20" r="5" />
+                <circle cx="35" cy="20" r="5" />
+                <circle cx="85" cy="20" r="5" />
+                <rect width="50" height="10" x="35" y="15" rx="0" ry="0" />
+                <circle cx="15" cy="40" r="5" />
+                <circle cx="35" cy="40" r="5" />
+                <circle cx="85" cy="40" r="5" />
+                <rect width="50" height="10" x="35" y="35" rx="0" ry="0" />
+                <circle cx="15" cy="60" r="5" />
+                <circle cx="35" cy="60" r="5" />
+                <circle cx="85" cy="60" r="5" />
+                <rect width="50" height="10" x="35" y="55" rx="0" ry="0" />
+                <circle cx="15" cy="80" r="5" />
+                <circle cx="35" cy="80" r="5" />
+                <circle cx="85" cy="80" r="5" />
+                <rect width="50" height="10" x="35" y="75" rx="0" ry="0" />
+              </g>
+            </svg>
+        </div>
+        
+    </div>
+    
+</div>
+</div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="install">
+<h1>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h1>
+<p>Before installing <strong class="program">Smilei</strong>, you need to install a few dependencies:</p>
+<ul class="simple">
+<li><p>A C++11 compiler, optionally implementing openMP version &gt; 4.5
+(gcc users: v6.0 or newer recommended)</p></li>
+<li><p>an MPI library (by default a version supporting <code class="docutils literal notranslate"><span class="pre">MPI_THREAD_MULTIPLE</span></code>
+is required: v4.0 or newer recommended)</p></li>
+<li><p>an HDF5 library compatible with your versions of C++ and MPI</p></li>
+<li><p>Python 2.7 or Python 3+ (with header files)</p></li>
+</ul>
+<p>Optional dependencies are:</p>
+<ul class="simple">
+<li><p>Git</p></li>
+<li><p>Python modules: sphinx, h5py, numpy, matplotlib, pint</p></li>
+<li><p>ffmpeg</p></li>
+<li><p>the <a class="reference external" href="http://picsar.net">Picsar</a> library: see <a class="reference internal" href="install_PICSAR.html"><span class="doc">this documentation</span></a></p></li>
+</ul>
+<hr class="docutils" />
+<section id="install-the-dependencies">
+<h2>Install the dependencies<a class="headerlink" href="#install-the-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>There are various ways to install all dependencies, depending on the platform:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="install_macos.html"><span class="doc">On MacOs</span></a></p></li>
+<li><p><a class="reference internal" href="install_linux.html"><span class="doc">On Linux</span></a></p></li>
+<li><p><a class="reference internal" href="install_supercomputer.html"><span class="doc">On a supercomputer</span></a></p></li>
+</ul>
+<p>The command <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">help</span></code> can give you some information about your environment.</p>
+<p>If you have successfully installed these dependencies on other platforms,
+please <a class="reference internal" href="partners.html"><span class="doc">contact us</span></a> and share!</p>
+<hr class="docutils" />
+</section>
+<section id="download-and-compile">
+<span id="compile"></span><h2>Download and compile<a class="headerlink" href="#download-and-compile" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Clone the latest <strong class="program">Smilei</strong> version from Github:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /path/of/your/choice/
+git clone https://github.com/SmileiPIC/Smilei.git
+</pre></div>
+</div>
+<p>If you do not have <code class="docutils literal notranslate"><span class="pre">git</span></code>, you can dowload a tarball <a class="reference internal" href="releases.html#latestversion"><span class="std std-ref">here</span></a>
+and extract it in a new folder.</p>
+</li>
+<li><p>In a terminal, go to that location and compile:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> Smilei
+make
+</pre></div>
+</div>
+<p>If the compilation is successful, you should now have a new <code class="docutils literal notranslate"><span class="pre">smilei</span></code> executable.</p>
+</li>
+<li><p>The next step is to <a class="reference internal" href="namelist.html"><span class="doc">write a namelist</span></a>.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="advanced-compilation-options">
+<h2>Advanced compilation options<a class="headerlink" href="#advanced-compilation-options" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Compile with several processors (fast compilation)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make -j <span class="m">4</span>
+</pre></div>
+</div>
+<p class="rubric">Compilation configuration with keyword “config”</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make <span class="nv">config</span><span class="o">=</span>debug           <span class="c1"># With debugging output (slow execution)</span>
+make <span class="nv">config</span><span class="o">=</span>noopenmp        <span class="c1"># Without OpenMP support</span>
+make <span class="nv">config</span><span class="o">=</span>no_mpi_tm       <span class="c1"># Without a MPI library which supports MPI_THREAD_MULTIPLE</span>
+make <span class="nv">config</span><span class="o">=</span>scalasca        <span class="c1"># For the Scalasca profiler</span>
+make <span class="nv">config</span><span class="o">=</span>advisor         <span class="c1"># For Intel Advisor</span>
+make <span class="nv">config</span><span class="o">=</span>vtune           <span class="c1"># For Intel Vtune</span>
+make <span class="nv">config</span><span class="o">=</span>inspector       <span class="c1"># For Intel Inspector</span>
+make <span class="nv">config</span><span class="o">=</span>detailed_timers <span class="c1"># More detailed timers, but somewhat slower execution</span>
+</pre></div>
+</div>
+<p>It is possible to combine arguments above within quotes, for instance:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make <span class="nv">config</span><span class="o">=</span><span class="s2">&quot;debug noopenmp&quot;</span> <span class="c1"># With debugging output, without OpenMP</span>
+</pre></div>
+</div>
+<p class="rubric">Obtain some information about the compilation</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make print-XXX               <span class="c1"># Prints the value of makefile variable XXX</span>
+make env                     <span class="c1"># Prints the values of all makefile variables</span>
+make <span class="nb">help</span>                    <span class="c1"># Gets some help on compilation</span>
+</pre></div>
+</div>
+<p class="rubric">Machine-specific compilation</p>
+<p>Each machine may require a specific configuration (environment variables,
+modules, etc.). These instructions may be included in a file of your choice,
+via the <code class="docutils literal notranslate"><span class="pre">machine</span></code> argument:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make <span class="nv">machine</span><span class="o">=</span>my_machine_file
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">my_machine_file</span></code> is a file, located in
+<code class="docutils literal notranslate"><span class="pre">scripts/compile_tools/machine</span></code>, containing the lines of command to be
+executed before compilation. If you successfully write such a file for
+a common supercomputer, please share it with developpers so that it can
+be included in the next release of <strong class="program">Smilei</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="environment-variables-for-compilation">
+<h2>Environment variables for compilation<a class="headerlink" href="#environment-variables-for-compilation" title="Permalink to this headline">¶</a></h2>
+<p>Several environment variables may be required, depending on your setup.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SMILEICXX</span></code>: the MPI-C++ compiler.
+Defaults to <code class="docutils literal notranslate"><span class="pre">mpicxx</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HDF5_ROOT_DIR</span></code>: the folder for the HDF5 library.
+Defaults to <code class="docutils literal notranslate"><span class="pre">$HDF5_ROOT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BUILD_DIR</span></code>: the folder where the compilation should occur.
+Defaults to <code class="docutils literal notranslate"><span class="pre">./build</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PYTHONEXE</span></code>: the python executable to use in smilei.
+Defaults to <code class="docutils literal notranslate"><span class="pre">python</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PICSAR</span></code>: set to <code class="docutils literal notranslate"><span class="pre">TRUE</span></code> to enable the PSATD solver from picsar.
+Defaults to <code class="docutils literal notranslate"><span class="pre">FALSE</span></code>.</p></li>
+</ul>
+<p>The usual <code class="docutils literal notranslate"><span class="pre">CXXFLAGS</span></code> and <code class="docutils literal notranslate"><span class="pre">LDFLAGS</span></code> can also be used to pass other
+arguments to the compiler and linker.</p>
+<hr class="docutils" />
+</section>
+<section id="options-for-simd-vectorization">
+<span id="vectorization-flags"></span><h2>Options for SIMD vectorization<a class="headerlink" href="#options-for-simd-vectorization" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="vectorization.html"><span class="doc">SIMD vectorization</span></a> of <strong class="program">Smilei</strong>
+uses <code class="docutils literal notranslate"><span class="pre">#pragma</span> <span class="pre">omp</span> <span class="pre">simd</span></code>.
+To be enabled, you must provide appropriate options to your compiler through
+the environment variable <code class="docutils literal notranslate"><span class="pre">CXXFLAGS</span></code>.</p>
+<p>For instance, <strong class="program">Smilei</strong> has been tested on
+Intel processors (Skylake 8168) with an Intel environment.
+The following flags provide a good performance:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-xCOMMON-AVX512 -ip -ipo -inline-factor<span class="o">=</span><span class="m">1000</span> -D__INTEL_SKYLAKE_8168
+</pre></div>
+</div>
+<p>The vectorization must also be activated
+<a class="reference internal" href="namelist.html#vectorization"><span class="std std-ref">in the namelist</span></a>.</p>
+</section>
+<hr class="docutils" />
+<section id="create-the-documentation">
+<h2>Create the documentation<a class="headerlink" href="#create-the-documentation" title="Permalink to this headline">¶</a></h2>
+<p>If you have installed the python module <code class="docutils literal notranslate"><span class="pre">sphinx</span></code>, you can create the
+documentation (which you are currently reading) with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make doc
+</pre></div>
+</div>
+<p>This creates a local <em>html</em> website accessible in your <code class="docutils literal notranslate"><span class="pre">build/html/</span></code> folder.</p>
+<hr class="docutils" />
+</section>
+<section id="install-the-happi-module">
+<span id="installmodule"></span><h2>Install the happi module<a class="headerlink" href="#install-the-happi-module" title="Permalink to this headline">¶</a></h2>
+<p>A python module, <code class="docutils literal notranslate"><span class="pre">happi</span></code>, is provided to view, extract and post-process
+data from all the diagnostics.
+There are several ways to load this module in python.</p>
+<ol class="arabic simple">
+<li><p>Recommended:</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make happi
+</pre></div>
+</div>
+<p>This has to be done only once, unless you move the smilei directory elsewhere.
+This command creates a small file in the Python <em>user-site</em> directory that tells python
+where to find the module.
+To remove it use the command <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">uninstall_happi</span></code>.</p>
+<p>The module will directly be accessible from <em>python</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">happi</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Alternative: Execute the <code class="docutils literal notranslate"><span class="pre">Diagnostics.py</span></code> script from python</p></li>
+</ol>
+<blockquote>
+<div><p>Adding a new <em>python</em> module is not always possible.
+Instead, we provide the script <code class="docutils literal notranslate"><span class="pre">Diagnostics.py</span></code> which is able to find the
+<code class="docutils literal notranslate"><span class="pre">happi</span></code> module and import it into <em>python</em>.</p>
+<p>You may add the following command in your own python script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">execfile</span><span class="p">(</span><span class="s2">&quot;/path/to/Smilei/scripts/Diagnostics.py&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="install-the-smilei-tables-tool">
+<h2>Install the <code class="docutils literal notranslate"><span class="pre">smilei_tables</span></code> tool<a class="headerlink" href="#install-the-smilei-tables-tool" title="Permalink to this headline">¶</a></h2>
+<p>Generation of the tables is handled by an external tools.
+A full documentation is available on <a class="reference internal" href="tables.html"><span class="doc">the dedicated page</span></a>.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      <div>
+      <a href="site.html">Site index</a>
+      </div>
+      <div>
+        Last updated on Jul 06, 2021
+      </div>
+      
+      <div>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.3</a>
+      </div>
+      
+    </div>
+    
+    <script type="text/javascript">
+        
+        var nav = document.getElementById("nav");
+        var nav_list = document.getElementById("nav_list");
+        var nav_button = document.getElementById("nav_button");
+        var smallScreenMenu = document.getElementById("smallScreenMenu");
+        var smallScreenMenuButton = document.getElementById("smallScreenMenuButton");
+        var searchicon = document.getElementById("searchicon");
+        var searchbox  = document.getElementById("searchbox");
+        var searchinput= document.getElementById("searchinput");
+        var menus = document.getElementsByClassName("menu");
+        for( var i=0; i<menus.length; i++ )
+            menus[i].active = false;
+        
+        
+        var ul = nav_list.getElementsByTagName("ul")[0], li;
+        var keep_nav = false;
+        if( ul ) {
+            li = ul.firstElementChild;
+            if( li ) {
+                if( li.getElementsByTagName("ul").length > 0 ) keep_nav = true;
+            }
+        }
+        if( keep_nav ) {
+            li.removeChild( li.firstElementChild );
+        } else {
+            document.getElementById("nav_positioner").removeChild( document.getElementById("nav") );
+        }
+        
+        function navOff() {
+            nav_list.style.display = "none";
+            nav_button.className = "";
+            nav.style.overflowY = "visible";
+        }
+        
+        function toggleNav() {
+            for( var i=0; i<menus.length; i++ )
+                menuOff( menus[i] );
+            if( nav_list.style.display != "inline-block" ) {
+                nav_list.style.display = "inline-block";
+                nav_button.className = "pushed";
+                nav.style.overflowY = "auto";
+            } else {
+                navOff();
+            }
+        }
+        
+        function toggleSmallScreenMenu(e) {
+            e.preventDefault();
+            if( smallScreenMenu.className != "on" ) {
+                smallScreenMenu.className = "on";
+                smallScreenMenuButton.className = "pushed";
+                document.documentElement.style.overflow = "hidden";
+            } else {
+                smallScreenMenu.className = "off";
+                smallScreenMenuButton.className = "";
+                document.documentElement.style.overflow = "";
+            }
+        }
+        
+        function prepareMenu(menu_id) {
+            var menu = document.getElementById(menu_id);
+            menu.timer1 = setTimeout(function(a){ return function(){thisMenuOnly(a)};}(menu_id), 100);
+            menu.addEventListener("mouseleave", function(a){ return function(){clearTimeout(a.timer1)};}(menu) );
+        }
+        
+        function leaveMenu(menu_id, source) {
+            var menu = document.getElementById(menu_id);
+            menu.timer2 = setTimeout(function(a){ return function(){menuOff(a)};}(menu), 1000);
+            source.addEventListener("mouseenter", function(a){ return function(){clearTimeout(a.timer2)};}(menu) );
+        }
+        
+        function menuOn( menu ) {
+            var divs = menu.getElementsByTagName("div");
+            if(nav_list) navOff();
+            divs[1].className = "on";
+            divs[0].className = "menuButton pushed";
+            menu.active = true;
+        }
+        function menuOff( menu ) {
+            var divs = menu.getElementsByTagName("div");
+            divs[1].className = "off";
+            divs[0].className = "menuButton";
+            menu.active = false;
+        }
+        
+        function thisMenuOnly(menu_id) {
+            var menu = document.getElementById(menu_id);
+            for( var i=0; i<menus.length; i++ )
+                if( i!=menu_id )
+                    menuOff( menus[i] );
+            menuOn( menu );
+        }
+        
+        function toggleMenu(menu_id) {
+            var menu = document.getElementById(menu_id);
+            if( menu.active ) {
+                menuOff( menu );
+            } else {
+                for( var i=0; i<menus.length; i++ )
+                    if( i!=menu_id )
+                        menuOff( menus[i] );
+                menuOn( menu );
+            }
+        }
+        
+        function openSearch() {
+            for( var i=0; i<menus.length; i++ ) {
+                menuOff( menus[i] );
+                menus[i].style.zIndex = "-1";
+            }
+            searchicon.style.display = "none";
+            closesearchicon.style.display = "block";
+            searchbox.style.display = "block";
+            searchinput.focus();
+        }
+        
+        function closeSearch() {
+            searchicon.style.display = "block";
+            closesearchicon.style.display = "none";
+            searchbox .style.display = "none";
+            for( var i=0; i<menus.length; i++ )
+                menus[i].style.zIndex = "0";
+        }
+        
+        
+        var documentDiv = document.getElementsByClassName("document")[0];
+        documentDiv.addEventListener('click', function (event) {
+            if(nav_list) navOff();
+            for( var i=0; i<menus.length; i++ )
+                menuOff( menus[i] );
+        });
+    </script>
+  </body>
+</html>

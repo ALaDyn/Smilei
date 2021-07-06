@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Publications &#8212; Smilei 4.6 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/smilei_theme.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/smileiIcon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Partners" href="partners.html" />
+    <link rel="prev" title="More" href="more.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      scale: 95,
+      availableFonts: ["TeX"]
+    }
+  });
+  </script>
+   
+  </head><body>
+
+<div id="smallScreenMenu" class="off">
+
+    
+    <div class="toctree-smilei">
+        <ul>
+                <li class="outer">
+                    <a href="licence.html">Licence</a>
+                </li>
+                <li class="outer">
+                    <a href="synopsis.html">Synopsis</a>
+                </li>
+                <li class="outer">
+                    <a href="highlights.html">Highlights</a>
+                </li>
+                <li class="outer">
+                    <a href="releases.html">Releases</a>
+                </li>
+        </ul>
+        <hr />
+        <ul>
+                <li class="outer">
+                    <a href="units.html">Units</a>
+                </li>
+                <li class="outer">
+                    <a href="algorithms.html">PIC algorithms</a>
+                </li>
+                <li class="outer">
+                    <a href="parallelization.html">Parallelization basics</a>
+                </li>
+                <li class="outer">
+                    <a href="SDMD.html">Single-domain multiple decompositions</a>
+                </li>
+                <li class="outer">
+                    <a href="vectorization.html">Vectorization</a>
+                </li>
+                <li class="outer">
+                    <a href="collisions.html">Binary collisions & reactions</a>
+                </li>
+                <li class="outer">
+                    <a href="ionization.html">Ionization</a>
+                </li>
+                <li class="outer">
+                    <a href="radiation_loss.html">High-energy photon emission & radiation reaction</a>
+                </li>
+                <li class="outer">
+                    <a href="multiphoton_Breit_Wheeler.html">Multiphoton Breit-Wheeler pair creation</a>
+                </li>
+                <li class="outer">
+                    <a href="particle_merging.html">Particle Merging</a>
+                </li>
+                <li class="outer">
+                    <a href="particle_injector.html">Particle Injector</a>
+                </li>
+                <li class="outer">
+                    <a href="laser_envelope.html">Laser envelope model</a>
+                </li>
+                <li class="outer">
+                    <a href="relativistic_fields_initialization.html">Field initialization for relativistic species</a>
+                </li>
+                <li class="outer">
+                    <a href="azimuthal_modes_decomposition.html">Azimuthal modes decomposition</a>
+                </li>
+        </ul>
+        <hr />
+        <ul>
+                <li class="outer">
+                    <a href="installation.html">Install</a>
+                </li>
+                <li class="outer">
+                    <a href="namelist.html">Write a namelist</a>
+                </li>
+                <li class="outer">
+                    <a href="run.html">Run</a>
+                </li>
+                <li class="outer">
+                    <a href="post-processing.html">Post-process</a>
+                </li>
+                <li class="outer">
+                    <a href="contribute.html">Contribute</a>
+                </li>
+                <li class="outer">
+                    <a href="troubleshoot.html">Troubleshoot</a>
+                </li>
+        </ul>
+        <hr />
+        <ul>
+            </ul>
+                <ul>
+<li><a class="reference internal" href="#">Publications</a><ul>
+<li><a class="reference internal" href="#reference-article">Reference article</a></li>
+<li><a class="reference internal" href="#accepted">Accepted</a></li>
+<li><a class="reference internal" href="#published">Published</a></li>
+</ul>
+</li>
+</ul>
+
+            <ul>
+                <li class="outer">
+                    <a href="partners.html">Partners</a>
+                </li>
+                <li class="outer">
+                    <a href="https://smileipic.github.io/tutorials">Smilei tutorials</a>
+                </li>
+        </ul>
+        <hr />
+    </div>
+
+</div>
+<div id="hcontainer">
+    <div id="nav_positioner">
+        <div id="nav">
+            <div id="nav_button" onclick="toggleNav()">
+                Sections
+            </div>
+            <div id="nav_list" class="toctree-smilei">
+                <div id="nav_title"><a href="#">Publications</a></div>
+                <ul>
+<li><a class="reference internal" href="#">Publications</a><ul>
+<li><a class="reference internal" href="#reference-article">Reference article</a></li>
+<li><a class="reference internal" href="#accepted">Accepted</a></li>
+<li><a class="reference internal" href="#published">Published</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="headercolor">
+    </div>
+    <div class="hpositioner">
+        <div class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img class="logo" src="_static/smileiLogo.svg" alt="Logo" />
+            </a>
+        </div>
+        <div class="menu"
+            id="menu_Overview"
+            
+        >
+            <div id="menuButton_Overview" class="menuButton"
+                 onmouseenter="prepareMenu('menu_Overview')"
+                 onmousedown="event.preventDefault()"
+            >
+                <a href="overview.html">
+                    <span>Overview</span>
+                </a>
+            </div>
+            <div class="off" onmouseleave="leaveMenu('menu_Overview',this)">
+                <div class="toctree-smilei">
+                    <ul>
+                        <li class="outer">
+                            <a href="licence.html">Licence</a>
+                        </li>
+                        <li class="outer">
+                            <a href="synopsis.html">Synopsis</a>
+                        </li>
+                        <li class="outer">
+                            <a href="highlights.html">Highlights</a>
+                        </li>
+                        <li class="outer">
+                            <a href="releases.html">Releases</a>
+                        </li>
+        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="menu"
+            id="menu_Understand"
+            
+        >
+            <div id="menuButton_Understand" class="menuButton"
+                 onmouseenter="prepareMenu('menu_Understand')"
+                 onmousedown="event.preventDefault()"
+            >
+                <a href="understand.html">
+                    <span>Understand</span>
+                </a>
+            </div>
+            <div class="off" onmouseleave="leaveMenu('menu_Understand',this)">
+                <div class="toctree-smilei">
+                    <ul>
+                        <li class="outer">
+                            <a href="units.html">Units</a>
+                        </li>
+                        <li class="outer">
+                            <a href="algorithms.html">PIC algorithms</a>
+                        </li>
+                        <li class="outer">
+                            <a href="parallelization.html">Parallelization basics</a>
+                        </li>
+                        <li class="outer">
+                            <a href="SDMD.html">Single-domain multiple decompositions</a>
+                        </li>
+                        <li class="outer">
+                            <a href="vectorization.html">Vectorization</a>
+                        </li>
+                        <li class="outer">
+                            <a href="collisions.html">Binary collisions & reactions</a>
+                        </li>
+                        <li class="outer">
+                            <a href="ionization.html">Ionization</a>
+                        </li>
+                        <li class="outer">
+                            <a href="radiation_loss.html">High-energy photon emission & radiation reaction</a>
+                        </li>
+                        <li class="outer">
+                            <a href="multiphoton_Breit_Wheeler.html">Multiphoton Breit-Wheeler pair creation</a>
+                        </li>
+                        <li class="outer">
+                            <a href="particle_merging.html">Particle Merging</a>
+                        </li>
+                        <li class="outer">
+                            <a href="particle_injector.html">Particle Injector</a>
+                        </li>
+                        <li class="outer">
+                            <a href="laser_envelope.html">Laser envelope model</a>
+                        </li>
+                        <li class="outer">
+                            <a href="relativistic_fields_initialization.html">Field initialization for relativistic species</a>
+                        </li>
+                        <li class="outer">
+                            <a href="azimuthal_modes_decomposition.html">Azimuthal modes decomposition</a>
+                        </li>
+        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="menu"
+            id="menu_Use"
+            
+        >
+            <div id="menuButton_Use" class="menuButton"
+                 onmouseenter="prepareMenu('menu_Use')"
+                 onmousedown="event.preventDefault()"
+            >
+                <a href="use.html">
+                    <span>Use</span>
+                </a>
+            </div>
+            <div class="off" onmouseleave="leaveMenu('menu_Use',this)">
+                <div class="toctree-smilei">
+                    <ul>
+                        <li class="outer">
+                            <a href="installation.html">Install</a>
+                        </li>
+                        <li class="outer">
+                            <a href="namelist.html">Write a namelist</a>
+                        </li>
+                        <li class="outer">
+                            <a href="run.html">Run</a>
+                        </li>
+                        <li class="outer">
+                            <a href="post-processing.html">Post-process</a>
+                        </li>
+                        <li class="outer">
+                            <a href="contribute.html">Contribute</a>
+                        </li>
+                        <li class="outer">
+                            <a href="troubleshoot.html">Troubleshoot</a>
+                        </li>
+        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="last menu"
+            id="menu_More"
+            style="font-weight:bold"
+        >
+            <div id="menuButton_More" class="menuButton"
+                 onmouseenter="prepareMenu('menu_More')"
+                 onmousedown="event.preventDefault()"
+            >
+                <a href="more.html">
+                    <span>More</span>
+                </a>
+            </div>
+            <div class="off" onmouseleave="leaveMenu('menu_More',this)">
+                <div class="toctree-smilei">
+                    <ul>
+                        <li >
+                            <a href="#">Publications</a>
+                        </li>
+                        <li class="outer">
+                            <a href="partners.html">Partners</a>
+                        </li>
+                        <li class="outer">
+                            <a href="https://smileipic.github.io/tutorials">Smilei tutorials</a>
+                        </li>
+        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            var es=document.getElementsByClassName("menuButton"), i=0;
+            var evt = "ontouchend" in document ? "touchend" : "click";
+            for( var i=0; i<es.length; i+=1 ) {
+                es[i].addEventListener(evt, function(a){ return function(){toggleMenu(a)};}(es[i].parentNode.id));
+            }
+        </script>
+        
+        <div id="searchbox" role="search" style="display:none">
+            <form class="search" action="search.html" method="get">
+              <input type="text" name="q" placeholder="Search" id="searchinput" />
+              <input type="hidden" name="check_keywords" value="yes" />
+              <input type="hidden" name="area" value="default" />
+            </form>
+        </div>
+        
+        <div id="searchicon" onclick="openSearch()" style="display:block">
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 80 120">
+              <g transform="translate(0,-932.36216)" >
+                <circle
+                   r="25" cy="977.51044" cx="38.078663"
+                   style="opacity:1;fill:none;stroke:#ffffff;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                <rect
+                   transform="matrix(0.36717877,0.93015039,-0.93427297,0.35655858,0,0)"
+                   rx="4.9996676" ry="7.4995141"
+                   y="316.16959" x="947.6142"
+                   height="14.117695" width="46.476151"
+                   style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;" />
+                <path
+                   d="m 41.383282,962.25996 a 15,15 0 0 1 11.660107,11.6355"
+                   style="opacity:1;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+              </g>
+            </svg>
+        </div>
+        <div id="closesearchicon" onclick="closeSearch()" style="display:none">
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 80 120">
+              <g
+                 transform="translate(0,-932.36216)">
+                <path
+                   d="m 10,962.36216 60,60.00004"
+                   style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+                <path
+                   d="M 70,962.36216 10,1022.3622"
+                   style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+              </g>
+            </svg>
+        </div>
+        
+        <div id="smallScreenMenuButton" onclick="toggleSmallScreenMenu(event)">
+            <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+               viewBox="-20 -20 140 140">
+              <g  style="fill:#ffffff;stroke:none;">
+                <circle cx="15" cy="20" r="5" />
+                <circle cx="35" cy="20" r="5" />
+                <circle cx="85" cy="20" r="5" />
+                <rect width="50" height="10" x="35" y="15" rx="0" ry="0" />
+                <circle cx="15" cy="40" r="5" />
+                <circle cx="35" cy="40" r="5" />
+                <circle cx="85" cy="40" r="5" />
+                <rect width="50" height="10" x="35" y="35" rx="0" ry="0" />
+                <circle cx="15" cy="60" r="5" />
+                <circle cx="35" cy="60" r="5" />
+                <circle cx="85" cy="60" r="5" />
+                <rect width="50" height="10" x="35" y="55" rx="0" ry="0" />
+                <circle cx="15" cy="80" r="5" />
+                <circle cx="35" cy="80" r="5" />
+                <circle cx="85" cy="80" r="5" />
+                <rect width="50" height="10" x="35" y="75" rx="0" ry="0" />
+              </g>
+            </svg>
+        </div>
+        
+    </div>
+    
+</div>
+</div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section class="bigcitation" id="publications">
+<h1>Publications<a class="headerlink" href="#publications" title="Permalink to this headline">¶</a></h1>
+<p class="emphlink">Tip: <a class="reference internal" href="licence.html#howtocite"><span class="std std-ref">How should I cite Smilei in my publication?</span></a></p>
+<p class="emphlink">Tip: <a class="reference internal" href="contribute.html#howtolistmypaper"><span class="std std-ref">How can I add my publication to this list?</span></a></p>
+<hr class="docutils" />
+<section id="reference-article">
+<h2>Reference article<a class="headerlink" href="#reference-article" title="Permalink to this headline">¶</a></h2>
+<dl class="citation">
+<dt class="label" id="derouillat2018"><span class="brackets">Derouillat2018</span></dt>
+<dd><p>J. Derouillat, A. Beck, F. Pérez, T. Vinci, M. Chiaramello, A. Grassi, M. Flé, G. Bouchard, I. Plotnikov, N. Aunai, J. Dargent, C. Riconda and M. Grech,
+<cite>SMILEI: a collaborative, open-source, multi-purpose particle-in-cell code for plasma simulation</cite>,
+<a class="reference external" href="https://doi.org/10.1016/j.cpc.2017.09.024">Comput. Phys. Commun. 222, 351-373 (2018)</a>,
+<a class="reference external" href="https://arxiv.org/abs/1702.05128">arXiv:1702.05128</a></p>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="accepted">
+<h2>Accepted<a class="headerlink" href="#accepted" title="Permalink to this headline">¶</a></h2>
+<dl class="citation">
+<dt class="label" id="thiele"><span class="brackets">Thiele</span></dt>
+<dd><p>I. Thiele and E. Siminos,
+<cite>Laser wakefield driven generation of isolated CEP-tunable intense sub-cycle pulses</cite>,
+<a class="reference external" href="https://arxiv.org/abs/1902.05014">arXiv:1902.05014</a></p>
+</dd>
+<dt class="label" id="perez"><span class="brackets">Perez</span></dt>
+<dd><p>F. Pérez, F. Amiranoff, C. Briand, S. Depierreux, M. Grech, L. Lancia, P. Loiseau, J.-R. Marquès, C. Riconda and T. Vinci,
+<cite>Numerical study of Langmuir wave coalescence in laser-plasma interaction</cite>,
+<a class="reference external" href="https://hal.archives-ouvertes.fr/hal-03172127">preprint</a></p>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="published">
+<h2>Published<a class="headerlink" href="#published" title="Permalink to this headline">¶</a></h2>
+<dl class="citation">
+<dt class="label" id="gelfer2021"><span class="brackets">Gelfer2021</span></dt>
+<dd><p>E. Gelfer, A. Fedotov and S. Weber,
+<cite>Radiation induced acceleration of ions</cite>,
+<a class="reference external" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.044801">Phys. Rev. Lett. 126, 044801 (2021)</a>,
+<a class="reference external" href="https://arxiv.org/abs/1907.02621">arXiv:1907.02621</a></p>
+</dd>
+<dt class="label" id="derouillat2020"><span class="brackets">Derouillat2020</span></dt>
+<dd><p>J. Derouillat and A. Beck,
+<cite>Single Domain Multiple Decompositions for Particle-in-Cell simulations</cite>,
+<a class="reference external" href="https://iopscience.iop.org/article/10.1088/1742-6596/1596/1/012052/pdf">J. Phys.: Conf. Ser. 1596, 012052 (2020)</a>,
+<a class="reference external" href="https://arxiv.org/abs/1912.04064">arXiv:1912.04064</a></p>
+</dd>
+<dt class="label" id="massimo2020"><span class="brackets">Massimo2020</span></dt>
+<dd><p>F. Massimo, I. Zemzemi, A. Beck, J. Derouillat and A. Specka,
+<cite>Efficient cylindrical envelope modeling for laser wakefield acceleration</cite>,
+<a class="reference external" href="https://iopscience.iop.org/article/10.1088/1742-6596/1596/1/012055/pdf">J. Phys.: Conf. Ser. 1596, 012055 (2020)</a>,
+<a class="reference external" href="http://arxiv.org/abs/1912.04674">arXiv:1912.04674</a></p>
+</dd>
+<dt class="label" id="massimo2020ionization"><span class="brackets">Massimo2020Ionization</span></dt>
+<dd><p>F. Massimo, A. Beck, J. Derouillat, I. Zemzemi and A. Specka,
+<cite>Numerical modeling of laser tunneling ionization in Particle in Cell Codes with a laser envelope model</cite>,
+<a class="reference external" href="https://doi.org/10.1103/PhysRevE.102.033204">Phys. Rev. E 102, 033204 (2020)</a>,
+<a class="reference external" href="https://arxiv.org/abs/2006.04433">arXiv:2006.04433</a></p>
+</dd>
+<dt class="label" id="marcowith2020"><span class="brackets">Marcowith2020</span></dt>
+<dd><p>A. Marcowith, G. Ferrand, M. Grech, Z. Meliani, I. Plotnikov and R. Walder,
+<cite>Multi-scale simulations of particle acceleration in astrophysical systems</cite>,
+<a class="reference external" href="https://doi.org/10.1007/s41115-020-0007-6">Living Reviews in Computational Astrophysics 6, 1 (2020)</a>,
+<a class="reference external" href="https://arxiv.org/abs/2002.09411">arXiv:2002.09411</a></p>
+</dd>
+<dt class="label" id="dargent2020"><span class="brackets">Dargent2020</span></dt>
+<dd><p>J. Dargent, N. Aunai, B. Lavraud, S. Toledo-Redondo and F. Califano,
+<cite>Simulation of Plasmaspheric Plume Impact on Dayside Magnetic Reconnection</cite>,
+<a class="reference external" href="https://doi.org/10.1029/2019GL086546">Geophys. Res. Lett. 47, e2019GL086546 (2020)</a>,
+<a class="reference external" href="https://arxiv.org/abs/2002.02243">arXiv:2002.02243</a></p>
+</dd>
+<dt class="label" id="sundstrom2020"><span class="brackets">Sundström2020</span></dt>
+<dd><p>A. Sundström, L. Gremillet, E. Siminos and I. Pusztai,
+<cite>Fast collisional electron heating and relaxation in thin foils driven by a circularly polarized ultraintense short-pulse laser</cite>,
+<a class="reference external" href="https://doi.org/10.1017/S0022377820000264">J. Plasma Phys. 86, 755860201 (2020)</a>,
+<a class="reference external" href="https://arxiv.org/abs/1911.09562">arXiv:1911.09562</a></p>
+</dd>
+<dt class="label" id="gelfer2020"><span class="brackets">Gelfer2020</span></dt>
+<dd><p>E. Gelfer, A. Fedotov, O. Klimo and S. Weber,
+<cite>Absorption and opacity threshold for a thin foil in a strong circularly polarized laser field</cite>,
+<a class="reference external" href="https://doi.org/10.1103/PhysRevE.101.033204">Phys. Rev. E 101, 033204 (2020)</a>,
+<a class="reference external" href="https://arxiv.org/abs/1906.05902">arXiv:1906.05902</a></p>
+</dd>
+<dt class="label" id="ferri2020"><span class="brackets">Ferri2020</span></dt>
+<dd><p>J. Ferri, I. Thiele, E. Siminos, L. Gremillet, E. Smetania, A. Dmitriev, G. Cantono, C.-G. Wahlström and T. Fülöp,
+<cite>Enhancement of laser-driven ion acceleration in non-periodic nanostructured targets</cite>,
+<a class="reference external" href="https://doi.org/10.1017/S0022377819000898">J. Plasma Phys. 86, 905860101 (2020)</a>,
+<a class="reference external" href="https://arxiv.org/abs/1905.11131">arXiv:1905.11131</a></p>
+</dd>
+<dt class="label" id="peng2019"><span class="brackets">Peng2019</span></dt>
+<dd><p>H. Peng, C. Riconda, M. Grech and S. Weber,
+<cite>Nonlinear dynamics of laser-generated ion-plasma gratings: A unified description</cite>,
+<a class="reference external" href="https://doi.org/10.1103/PhysRevE.100.061201">Phys. Rev. E 100, 061201(R) (2019)</a>,
+<a class="reference external" href="https://arxiv.org/abs/1911.03440">arXiv:1911.03440</a></p>
+</dd>
+<dt class="label" id="fang2019"><span class="brackets">Fang2019</span></dt>
+<dd><p>Jun Fang, Chun-Yan Lu, Jing-Wen Yan and Huan Yu,
+<cite>Early acceleration of electrons and protons at the nonrelativistic quasiparallel shocks with different obliquity angles</cite>,
+<a class="reference external" href="https://doi.org/10.1088/1674-4527/19/12/182">Res. Astron. Astrophys. 19, 182 (2019)</a>,
+<a class="reference external" href="https://arxiv.org/abs/1908.08170">arXiv:1908.08170</a></p>
+</dd>
+<dt class="label" id="yoon2019b"><span class="brackets">Yoon2019b</span></dt>
+<dd><p>Young Dae Yoon and P. M. Bellan,
+<cite>Kinetic Verification of the Stochastic Ion Heating Mechanism in Collisionless Magnetic Reconnection</cite>,
+<a class="reference external" href="https://doi.org/10.3847/2041-8213/ab5b0a">ApJL 887, L29 (2019)</a></p>
+</dd>
+<dt class="label" id="yoon2019a"><span class="brackets">Yoon2019a</span></dt>
+<dd><p>Young Dae Yoon and P. M. Bellan,
+<cite>The electron canonical battery effect in magneticreconnection: Completion of the electroncanonical vorticity framework</cite>,
+<a class="reference external" href="https://doi.org/10.1063/1.5122225">Phys. Plasmas 26, 100702 (2019)</a></p>
+</dd>
+<dt class="label" id="massimo2019"><span class="brackets">Massimo2019</span></dt>
+<dd><p>F. Massimo, A. Beck, J. Derouillat, M. Grech, M. Lobet, F. Pérez, I. Zemzemi and A. Specka,
+<cite>Efficient start-to-end 3D envelope modeling for two-stage laser wakefield acceleration experiments</cite>,
+<a class="reference external" href="https://dx.doi.org/10.1088/1361-6587/ab49cf">Plasma Phys. Control. Fusion 61, 124001 (2019)</a>,
+<a class="reference external" href="http://arxiv.org/abs/1912.04127">arXiv:1912.04127</a></p>
+</dd>
+<dt class="label" id="beck2019"><span class="brackets">Beck2019</span></dt>
+<dd><p>A. Beck, J. Dérouillat, M. Lobet, A. Farjallah, F. Massimo, I. Zemzemi, F. Perez, T. Vinci and M. Grech,
+<cite>Adaptive SIMD optimizations in particle-in-cell codes with fine-grain particle sorting</cite>,
+<a class="reference external" href="https://doi.org/10.1016/j.cpc.2019.05.001">Comput. Phys. Commun. 244, 246 (2019)</a>,
+<a class="reference external" href="https://arxiv.org/abs/1810.03949">arXiv:1810.03949</a></p>
+</dd>
+<dt class="label" id="perez2019"><span class="brackets">Perez2019</span></dt>
+<dd><p>F. Pérez and M. Grech,
+<cite>Oblique-incidence, arbitrary-profile wave injection for electromagnetic simulations</cite>,
+<a class="reference external" href="https://doi.org/10.1103/PhysRevE.99.033307">Phys. Rev. E 99, 033307 (2019)</a>,
+<a class="reference external" href="https://arxiv.org/abs/1809.04435">arXiv:1809.04435</a></p>
+</dd>
+<dt class="label" id="thiele2019"><span class="brackets">Thiele2019</span></dt>
+<dd><p>I. Thiele, E. Siminos and T. Fülöp,
+<cite>Electron beam driven generation of frequency-tunable isolated relativistic sub-cycle pulses</cite>,
+<a class="reference external" href="https://doi.org/10.1103/PhysRevLett.122.104803">Phys. Rev. Lett. 122, 104803 (2019)</a>,
+<a class="reference external" href="https://arxiv.org/abs/1806.04976">arXiv:1806.04976</a></p>
+</dd>
+<dt class="label" id="niel2018b"><span class="brackets">Niel2018b</span></dt>
+<dd><p>F. Niel, C. Riconda, F. Amiranoff, M. Lobet, J. Derouillat, F. Pérez, T. Vinci and M. Grech
+<cite>From quantum to classical modelling of radiation reaction: a focus on the radiation spectrum</cite>,
+<a class="reference external" href="http://iopscience.iop.org/article/10.1088/1361-6587/aace22">Plasma Phys. Control. Fusion 60, 094002 (2018)</a>,
+<a class="reference external" href="https://arxiv.org/abs/1802.02927">arXiv:1802.02927</a></p>
+</dd>
+<dt class="label" id="plotnikov2017"><span class="brackets">Plotnikov2017</span></dt>
+<dd><p>I. Plotnikov, A. Grassi and M. Grech,
+<cite>Perpendicular relativistic shocks in magnetized pair plasma</cite>,
+<a class="reference external" href="https://academic.oup.com/mnras/article/477/4/5238/4978470">Monthly Notices of the Royal Astronomical Society 477, 5238 (2018)</a>,
+<a class="reference external" href="https://arxiv.org/abs/1712.02883">arXiv:1712.02883</a></p>
+</dd>
+<dt class="label" id="niel2018a"><span class="brackets">Niel2018a</span></dt>
+<dd><p>F. Niel, C. Riconda, F. Amiranoff, R. Duclous and M. Grech,
+<cite>From quantum to classical modelling of radiation reaction: a focus on stochasticity effects</cite>,
+<a class="reference external" href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.97.043209">Phys. Rev. E 97, 043209 (2018)</a>,
+<a class="reference external" href="https://arxiv.org/abs/1707.02618">arXiv:1707.02618</a></p>
+</dd>
+<dt class="label" id="grassi2017b"><span class="brackets">Grassi2017b</span></dt>
+<dd><p>A. Grassi, M. Grech, F. Amiranoff, A. Macchi and C. Riconda,
+<cite>Radiation-pressure-driven ion Weibel instability and collisionless shocks</cite>,
+<a class="reference external" href="https://doi.org/10.1103/PhysRevE.96.033204">Phys. Rev. E 96, 033204 (2017)</a>,
+<a class="reference external" href="https://arxiv.org/abs/1705.05402">arXiv:1705.05402</a></p>
+</dd>
+<dt class="label" id="fedeli2017"><span class="brackets">Fedeli2017</span></dt>
+<dd><p>L. Fedeli, A. Formenti, L. Cialfi, A. Sgattoni, G. Cantono and M. Passoni,
+<cite>Structured targets for advanced laser-driven sources</cite>,
+<a class="reference external" href="http://iopscience.iop.org/article/10.1088/1361-6587/aa8a54/meta">Plasma Phys. Control. Fusion 60, 014013 (2017)</a></p>
+</dd>
+<dt class="label" id="golovanov2017"><span class="brackets">Golovanov2017</span></dt>
+<dd><p>A. A. Golovanov, I. Yu. Kostyukov, J. Thomas and A. Pukhov,
+<cite>Analytic model for electromagnetic fields in the bubble regime of plasma wakefield in non-uniform plasmas</cite>,
+<a class="reference external" href="http://aip.scitation.org/doi/full/10.1063/1.4996856">Phys. Plasmas 24, (2017)</a></p>
+</dd>
+<dt class="label" id="dargent2017"><span class="brackets">Dargent2017</span></dt>
+<dd><p>J. Dargent, N. Aunai, S. Toledo-Redondo, M. A. Shay, P. A. Cassak and K. Malakit,
+<cite>Kinetic simulation of asymmetric magnetic reconnection with cold ions</cite>,
+<a class="reference external" href="http://onlinelibrary.wiley.com/doi/10.1002/2016JA023831/full">J. Geophys. Res.: Space Phys. 122, 5290 (2017)</a></p>
+</dd>
+<dt class="label" id="grassi2017a"><span class="brackets">Grassi2017a</span></dt>
+<dd><p>A. Grassi, M. Grech, F. Amiranoff, F. Pegoraro, A. Macchi and C. Riconda,
+<cite>Electron Weibel instability in relativistic counterstreaming plasmas with flow-aligned external magnetic fields</cite>,
+<a class="reference external" href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.95.023203">Phys. Rev. E 95, 023203 (2017)</a></p>
+</dd>
+<dt class="label" id="dargent2016"><span class="brackets">Dargent2016</span></dt>
+<dd><p>J. Dargent, N. Aunai, G. Belmont, N. Dorville, B. Lavraud and M. Hesse,
+<cite>Full particle-in-cell simulations of kinetic equilibria and the role of the initial current sheet on steady asymmetric magnetic reconnection</cite>,
+<a class="reference external" href="https://www.cambridge.org/core/journals/journal-of-plasma-physics/article/full-particleincell-simulations-of-kinetic-equilibria-and-the-role-of-the-initial-current-sheet-on-steady-asymmetric-magnetic-reconnection/6426B214AF7ABB34C2DA81BC60FE3EBC">J. Plasma Phys. 82, 905820305 (2016)</a></p>
+</dd>
+<dt class="label" id="chiaramello2016"><span class="brackets">Chiaramello2016</span></dt>
+<dd><p>M. Chiaramello, C. Riconda, F. Amiranoff, J. Fuchs, M. Grech, L. Lancia,
+J.-R. Marquès, T. Vinci and S. Weber,
+<cite>Optimization of interaction conditions
+for efficient short laser pulse amplification by Stimulated Brillouin Scattering
+in the Strongly Coupled regime</cite>,
+<a class="reference external" href="http://scitation.aip.org/content/aip/journal/pop/23/7/10.1063/1.4955322">Phys. Plasmas 23, 072103 (2016)</a></p>
+</dd>
+<dt class="label" id="beck2016"><span class="brackets">Beck2016</span></dt>
+<dd><p>A. Beck, J. Trier Frederiksen and J. Derouillat,
+<cite>Load management strategy for Particle-In-Cell simulations in high energy physics</cite>,
+<a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0168900216301577">Nucl. Inst. Meth. in Phys. Res. A (2016)</a></p>
+</dd>
+<dt class="label" id="lancia2016"><span class="brackets">Lancia2016</span></dt>
+<dd><p>L. Lancia, A. Giribono, L. Vassura, M. Chiaramello, C. Riconda, S. Weber, A. Castan, A. Chatelain, A. Frank, T.      Gangolf, M. N. Quinn, J. Fuchs and J.-R. Marquès,
+<cite>Signatures of the self-similar regime of strongly coupled stimulated brillouin scattering for efficient short laser pulse amplification</cite>,
+<a class="reference external" href="http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.075001">Phys. Rev. Lett. 116, 075001 (2016)</a></p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      <div>
+      <a href="site.html">Site index</a>
+      </div>
+      <div>
+        Last updated on Jul 06, 2021
+      </div>
+      
+      <div>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.3</a>
+      </div>
+      
+    </div>
+    
+    <script type="text/javascript">
+        
+        var nav = document.getElementById("nav");
+        var nav_list = document.getElementById("nav_list");
+        var nav_button = document.getElementById("nav_button");
+        var smallScreenMenu = document.getElementById("smallScreenMenu");
+        var smallScreenMenuButton = document.getElementById("smallScreenMenuButton");
+        var searchicon = document.getElementById("searchicon");
+        var searchbox  = document.getElementById("searchbox");
+        var searchinput= document.getElementById("searchinput");
+        var menus = document.getElementsByClassName("menu");
+        for( var i=0; i<menus.length; i++ )
+            menus[i].active = false;
+        
+        
+        var ul = nav_list.getElementsByTagName("ul")[0], li;
+        var keep_nav = false;
+        if( ul ) {
+            li = ul.firstElementChild;
+            if( li ) {
+                if( li.getElementsByTagName("ul").length > 0 ) keep_nav = true;
+            }
+        }
+        if( keep_nav ) {
+            li.removeChild( li.firstElementChild );
+        } else {
+            document.getElementById("nav_positioner").removeChild( document.getElementById("nav") );
+        }
+        
+        function navOff() {
+            nav_list.style.display = "none";
+            nav_button.className = "";
+            nav.style.overflowY = "visible";
+        }
+        
+        function toggleNav() {
+            for( var i=0; i<menus.length; i++ )
+                menuOff( menus[i] );
+            if( nav_list.style.display != "inline-block" ) {
+                nav_list.style.display = "inline-block";
+                nav_button.className = "pushed";
+                nav.style.overflowY = "auto";
+            } else {
+                navOff();
+            }
+        }
+        
+        function toggleSmallScreenMenu(e) {
+            e.preventDefault();
+            if( smallScreenMenu.className != "on" ) {
+                smallScreenMenu.className = "on";
+                smallScreenMenuButton.className = "pushed";
+                document.documentElement.style.overflow = "hidden";
+            } else {
+                smallScreenMenu.className = "off";
+                smallScreenMenuButton.className = "";
+                document.documentElement.style.overflow = "";
+            }
+        }
+        
+        function prepareMenu(menu_id) {
+            var menu = document.getElementById(menu_id);
+            menu.timer1 = setTimeout(function(a){ return function(){thisMenuOnly(a)};}(menu_id), 100);
+            menu.addEventListener("mouseleave", function(a){ return function(){clearTimeout(a.timer1)};}(menu) );
+        }
+        
+        function leaveMenu(menu_id, source) {
+            var menu = document.getElementById(menu_id);
+            menu.timer2 = setTimeout(function(a){ return function(){menuOff(a)};}(menu), 1000);
+            source.addEventListener("mouseenter", function(a){ return function(){clearTimeout(a.timer2)};}(menu) );
+        }
+        
+        function menuOn( menu ) {
+            var divs = menu.getElementsByTagName("div");
+            if(nav_list) navOff();
+            divs[1].className = "on";
+            divs[0].className = "menuButton pushed";
+            menu.active = true;
+        }
+        function menuOff( menu ) {
+            var divs = menu.getElementsByTagName("div");
+            divs[1].className = "off";
+            divs[0].className = "menuButton";
+            menu.active = false;
+        }
+        
+        function thisMenuOnly(menu_id) {
+            var menu = document.getElementById(menu_id);
+            for( var i=0; i<menus.length; i++ )
+                if( i!=menu_id )
+                    menuOff( menus[i] );
+            menuOn( menu );
+        }
+        
+        function toggleMenu(menu_id) {
+            var menu = document.getElementById(menu_id);
+            if( menu.active ) {
+                menuOff( menu );
+            } else {
+                for( var i=0; i<menus.length; i++ )
+                    if( i!=menu_id )
+                        menuOff( menus[i] );
+                menuOn( menu );
+            }
+        }
+        
+        function openSearch() {
+            for( var i=0; i<menus.length; i++ ) {
+                menuOff( menus[i] );
+                menus[i].style.zIndex = "-1";
+            }
+            searchicon.style.display = "none";
+            closesearchicon.style.display = "block";
+            searchbox.style.display = "block";
+            searchinput.focus();
+        }
+        
+        function closeSearch() {
+            searchicon.style.display = "block";
+            closesearchicon.style.display = "none";
+            searchbox .style.display = "none";
+            for( var i=0; i<menus.length; i++ )
+                menus[i].style.zIndex = "0";
+        }
+        
+        
+        var documentDiv = document.getElementsByClassName("document")[0];
+        documentDiv.addEventListener('click', function (event) {
+            if(nav_list) navOff();
+            for( var i=0; i<menus.length; i++ )
+                menuOff( menus[i] );
+        });
+    </script>
+  </body>
+</html>
